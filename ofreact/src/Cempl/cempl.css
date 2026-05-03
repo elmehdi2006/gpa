@@ -1,0 +1,245 @@
+.cempl-page {
+  min-height: 100vh;
+  padding: 32px 20px;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.cempl-shell {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cempl-header {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.cempl-brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.cempl-brand img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.cempl-brand h1 {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.cempl-brand p {
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.cempl-badge {
+  background: #eef2ff;
+  color: #1d4ed8;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cempl-header-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.cempl-logout-btn {
+  border: none;
+  background: #b01313;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cempl-logout-btn:hover {
+  background: #d51b1b;
+}
+
+.cempl-clock-card {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #ffffff;
+  border-radius: 24px;
+  padding: 34px 28px;
+  text-align: center;
+  box-shadow: 0 16px 35px rgba(15, 23, 42, 0.18);
+}
+
+.cempl-clock-label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cempl-time {
+  font-size: clamp(42px, 8vw, 86px);
+  margin: 12px 0;
+  line-height: 1;
+}
+
+.cempl-date {
+  font-size: 17px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.cempl-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.cempl-action {
+  border: none;
+  text-align: left;
+  border-radius: 22px;
+  padding: 24px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+  color: #ffffff;
+}
+
+.cempl-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.16);
+}
+
+.cempl-action.disabled {
+  opacity: 0.72;
+}
+
+.cempl-checkin {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.cempl-checkout {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.cempl-action-label {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cempl-action strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.cempl-action p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+}
+
+.cempl-status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cempl-info-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+}
+
+.cempl-info-card span {
+  display: block;
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.cempl-info-card strong {
+  font-size: 28px;
+}
+
+.cempl-info-card .success {
+  color: #059669;
+}
+
+.cempl-info-card .danger {
+  color: #dc2626;
+}
+
+.cempl-info-card .primary {
+  color: #2563eb;
+}
+
+.cempl-toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  max-width: 360px;
+  background: #111827;
+  color: #ffffff;
+  padding: 14px 18px;
+  border-radius: 14px;
+  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.2);
+  z-index: 50;
+}
+
+@media (max-width: 900px) {
+  .cempl-page {
+    padding: 15px;
+  }
+
+  .cempl-header {
+    flex-direction: column;
+  }
+
+  .cempl-brand {
+    align-items: flex-start;
+  }
+
+  .cempl-header-actions {
+    align-items: flex-start;
+  }
+
+  .cempl-actions,
+  .cempl-status-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cempl-brand img {
+    width: 72px;
+    height: 72px;
+  }
+}

@@ -1,0 +1,217 @@
+.emp-page {
+  height: 100vh;
+  display: flex;
+  background: #f4f7fb;
+  color: #1f2937;
+  overflow: hidden;
+}
+
+.emp-sidebar {
+  width: 250px;
+  min-width: 220px;
+  flex-shrink: 0;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.emp-logo {
+  width: 100%;
+  display: block;
+}
+
+.emp-logo img {
+  width: 100%;
+  display: block;
+  max-width: none;
+  height: auto;
+}
+
+.emp-menu {
+  width: 100%;
+  border: none;
+  background: #f1f2f6;
+  color: #1f2937;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.emp-menu:hover {
+  background: #e2e6ea;
+}
+
+.emp-menu.active {
+  background: #2f3542;
+  color: #ffffff;
+}
+
+.emp-main {
+  flex: 1;
+  width: calc(100% - 250px);
+  margin-left: 250px;
+  height: 100vh;
+  min-width: 0;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: auto;
+}
+
+.emp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.emp-title h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.emp-title p {
+  color: #6b7280;
+}
+
+.emp-form-card {
+  width: 100%;
+  max-width: 720px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.emp-card-head {
+  margin-bottom: 20px;
+}
+
+.emp-card-head h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.emp-form {
+  display: grid;
+  gap: 16px;
+}
+
+.emp-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.emp-field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.emp-field input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+}
+
+.emp-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.emp-submit {
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 13px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.emp-submit:hover {
+  background: #1d4ed8;
+}
+
+.emp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 30;
+}
+
+.emp-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.18);
+}
+
+.emp-modal h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.emp-modal p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.emp-modal-btn {
+  margin-top: 18px;
+  width: 100%;
+  border: none;
+  background: #2f3542;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .emp-sidebar {
+    display: none;
+  }
+
+  .emp-main {
+    width: 100%;
+    margin-left: 0;
+    padding: 15px;
+  }
+
+  .emp-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .emp-form-card {
+    max-width: none;
+  }
+}
